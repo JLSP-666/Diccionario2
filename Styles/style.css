@@ -1,0 +1,270 @@
+
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+body{
+    width: auto;
+    height: 100vh;
+    
+    
+}
+body::-webkit-scrollbar{
+    text-align: flex;
+    font-family: sans-serif;
+    width: 9px;
+    background: #ffffff;
+    
+}
+
+body::-webkit-scrollbar-thumb{
+    background-color: #900092;
+}
+
+
+
+
+header{
+    position: sticky;
+    top: 0px;
+    z-index: 2;
+    
+    font-variant-numeric: lining-nums;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 60px 40px 60px;
+    background-color: #410666;
+    --glow-color: #000000;
+    border: .30em solid var(--glow-color);
+    padding: 0em 4em;
+    font-size: 13px;
+    outline: none;
+    color: white;
+    height: 90px;
+    top: 0px;
+}
+.category-btn{
+    margin: 5px;
+    background-color: rgba(0, 0, 0, 0);
+    font-family:sans-serif  ;
+    font-style:oblique;
+    font-size: 16px;
+    border-radius: 20px;
+    border-width: 2px;
+    color: white;
+    border-style:solid;
+    padding: 9px;
+    font-style: oblique
+
+    
+}
+/* @keyframes Borde {
+    0% {
+        
+        background-color: green;
+    }
+    10% {
+        
+        background-color: rgb(228, 97, 10);
+    }
+    20% {
+       
+        background-color: rgb(23, 214, 248);
+    }
+    30% {
+        
+        background-color: rgb(228, 10, 130);
+    }
+    
+
+} */
+
+#parte1{
+    
+    color: #ffffff;
+    font-stretch:ultra-condensed;
+    font-size:25px;
+
+}
+#D{
+
+}
+#A{
+
+}
+#I{
+
+}
+main {
+    border-color: #000000;
+    border-width: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #011222;
+    background-image: url(../assets/image/Sin\ lllllllllllllll1.png);
+    background-size:auto;
+    height: fit-content;
+
+}
+
+#parte2{
+    display: flex;
+    gap: 7px;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+#Traducir{
+    margin-right: 15px;
+}
+
+.Cart-C {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Ajustar el número de columnas */
+    gap: 20px; /* Espacio entre las cartas */
+    margin: 20px auto;
+    width: 90%; /* El ancho de todo el contenedor */
+    box-sizing: border-box;
+}
+
+.Filtro{
+    
+    border-style: none;
+    align-items: center;
+   
+}
+
+/* cartas */
+.carta{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    min-height: 50vh;
+    
+    
+}
+
+.card {
+    display: flex;
+    padding: 10px;
+    position: relative;
+    width: 300px;
+    height: 400px;
+    margin: 20px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: #000000;
+    border-radius: 20px;
+    background-color: #000000;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.card .faceBack, .faceFront {
+    
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: .6s;
+}
+
+.faceFront {
+    
+    transform: perspective(600px) rotateY(0deg);
+    box-shadow: 0 5px 10px #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    
+}
+
+.faceFront .img  {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+
+    
+}
+
+.card .faceFront h2 {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 45px;
+    line-height: 45px;
+    color: #fff;
+    background: rgba(0,0,0,.4);
+    text-align: center;
+}
+
+.card .faceBack {
+    transform: perspective(600px) rotateY(180deg);
+    background: #410666;
+    /* padding: 15px; */
+    color: #f3f3f3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    box-shadow: 9px 9px 90px #000;
+    animation: SAS .6S infinite;
+}
+@keyframes SAS {
+    0% {
+        
+        box-shadow: 0 5px 50px #10ff38;     
+        
+    }
+    10% {
+        
+        box-shadow: 0 5px 50px #bc0808;
+       
+    }
+    20% {
+        
+        box-shadow: 0 5px 50px #fb07ff;
+       
+    }
+    30% {
+        
+        box-shadow: 0 5px 50px #0a94ef;
+        
+    }
+   
+
+}
+
+.card .faceBack h3 {
+    font-size: 30px;
+    margin-top: 20px;
+    letter-spacing: 1px;
+}
+
+.card .faceBack p {
+    margin: 40px;
+    letter-spacing: 1px;
+} 
+
+.card:hover .faceFront {
+    transform: perspective(600px) rotateY(160deg);
+}
+
+.card:hover .faceBack {
+    transform: perspective(600px) rotateX(360deg);
+}
+
+p{
+    font-size: 20px;
+}

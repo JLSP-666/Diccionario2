@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- links del estilo  -->
+    <link rel="stylesheet" href="styles/style.css">
+    <!-- icono del diccionario  -->
+    <link rel="shortcut icon" href="assets/image/iconoP.png" type="image/x-icon">
+    <!-- titulo de la pagina de navegacion  -->
+    <title>Diccionario D.A.I</title>
+</head>
+<body>
+    <header>
+        <!-- titulo de la pagina  -->
+        <div id="parte1"><h1 id="titulo">Diccionario <span id="D">D</span id="A">A<span id="I">I</span></h1></div>
+
+        <div id="parte2">
+           
+            <!-- los botones para selecionar el idioma de busqueda -->
+            <label class="español" for="">español</label>
+            <input type="radio" name="Traducir" id="Español">
+            <label class="ingles" for="">ingles</label>
+            <input type="radio" name="Traducir" id="Ingles">
+            <div id="order-select-container">
+                <label for="order-select">Ordenar por:</label>
+                <!-- donde se elije el orden de las palabras  -->
+                <select id="order-select">
+                    <option value="">Seleccionar</option>
+                    <option value="A-Z">A-Z</option>
+                    <option value="Z-A">Z-A</option>
+                </select>
+            </div>
+            <!-- caja de las categorias con sus botones -->
+            <div id="category-buttons">
+                <!-- Mostrar todas las categorías -->
+                <button class="category-btn" data-category="animals">animales</button>
+                <button class="category-btn" data-category="colors">colores</button>
+                <button class="category-btn" data-category="fruits">frutas</button>
+                <button class="category-btn" data-category="physical_descriptions">Descripciones</button>
+                <button class="category-btn" data-category="skills">habilidades</button>
+                <button class="category-btn" data-category="verbs">verbos</button>
+                <button class="category-btn" data-category="">Todas</button>
+            </div>
+            <!-- donde se escribe la palabra -->
+            <input type="text" placeholder="traducir palabra" id="buscar">
+            <!-- el boton para traducir de español -->
+            <button id="Traducir">Traducir</button>
+        </div>
+    </header>
+    <!-- seccion donde se crean las tarjetas  -->
+     <section id="sup-main"></section>
+    <main >
+        
+        <!-- <div class="Cart_C" >
+                    <div class="carta" id="carta">
+                        <div class="card" id="card">
+                            <div class="faceFront" id="face_front">
+                                <img src="assets/img/20230522_182000_509.jpg" class="img">
+                                <h2>Redes sociales</h2>
+                            </div>
+                            <div class="faceBack" id="face_back">
+                                <h3>Redes Sociales<h3>
+                                <p>En Proceso</p>
+                            </div>
+                        </div>
+                    </div>      
+        </div> -->
+    </main>
+    
+</body>
+<!-- sección de js  -->
+<script type="module" src="js/app.js"></script>
+<script type="module" src="js/dictionary.js"></script>
+
+</html>
