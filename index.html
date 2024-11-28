@@ -13,10 +13,61 @@
 <body>
     <header>
         <!-- titulo de la pagina  -->
-        <div id="parte1"><h1 id="titulo">Diccionario <span id="D">D</span id="A">A<span id="I">I</span></h1></div>
+        <div id="parte1"><h1 id="titulo">Diccionario D.A.I</h1></div>
 
+        <div class="divAgregar">
+            <button id="add-word-button"  >Agregar Palabra</button>
+        </div>
+        
+        <!-- Modal para el formulario -->
+        <div id="add-word-modal" style="display: none;">
+            <div id="add-word-modal-content">
+                <form id="add-word-form">
+                    <h3>Agregar nueva palabra</h3>
+                    
+                    <label for="spanish">Español:</label>
+                    <input type="text" id="spanish" placeholder="Palabra en español" required>
+                    
+                    <label for="english">Inglés:</label>
+                    <input type="text" id="english" placeholder="Palabra en inglés" required>
+                    
+                    <label for="description">Descripción/Ejemplo:</label>
+                    <input type="text" id="description" placeholder="Descripción o ejemplo" required>
+                    
+                    <label for="image">Imagen (opcional):</label>
+                    <input type="file" id="image" accept="image/*">
+                    
+                    <fieldset class="fieldsetDIV">
+                        <legend>Selecciona una categoría:</legend>
+                        <label>
+                            <input type="radio" name="category" value="animals"> Animales
+                        </label>
+                        <label>
+                            <input type="radio" name="category" value="colors"> Colores
+                        </label>
+                        <label>
+                            <input type="radio" name="category" value="fruits"> Frutas
+                        </label>
+                        <label>
+                            <input type="radio" name="category" value="physical_descriptions"> Descripciones
+                        </label>
+                        <label>
+                            <input type="radio" name="category" value="skills"> Habilidades
+                        </label>
+                        <label>
+                            <input type="radio" name="category" value="verbs"> Verbos
+                        </label>
+                    </fieldset>
+                    <br>
+                    
+                    <button type="submit">Guardar</button>
+                    <br>
+                    <button type="button" id="close-modal">Cancelar</button>
+                </form>
+            </div>
+        </div>
+                
         <div id="parte2">
-           
             <!-- los botones para selecionar el idioma de busqueda -->
             <label class="español" for="">español</label>
             <input type="radio" name="Traducir" id="Español">
@@ -49,7 +100,6 @@
         </div>
     </header>
     <!-- seccion donde se crean las tarjetas  -->
-     <section id="sup-main"></section>
     <main >
         
         <!-- <div class="Cart_C" >
